@@ -1,0 +1,19 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: service-oss
+  profiles:
+    active: dev
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+aliyun:
+  oss:
+    file:
+      endpoint: oss-cn-chengdu.aliyuncs.com
+      keyId: LTAI5tECjrikxQfFD6ViPap3
+      KeySecret: f4uoywXLco4KbDi262wBMU2ZnwBdeG
+      bucketName: ma-edu

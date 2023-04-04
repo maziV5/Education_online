@@ -1,0 +1,38 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: service-msm
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/guli
+    username: root
+    password: root
+  cache:
+    type: redis
+    redis:
+      use-key-prefix: true
+      time-to-live: -1
+      cache-null-values: false
+  redis:
+    host: 192.168.1.131
+    port: 6379
+    username: default
+    password: root
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  mail:
+    host: smtp.office365.com
+    username: maziv5@outlook.com
+    password: Laozijiusi6
+    properties.mail.smtp.starttls.enable: true
+
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

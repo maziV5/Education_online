@@ -1,0 +1,26 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: service-vod
+  profiles:
+    active: dev
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  servlet:
+    multipart:
+      #最大上传单个文件大小：默认1M
+      max-file-size: 1024MB
+      #最大总上传单个数据大小：默认10M
+      max-request-size: 1024MB
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+
+aliyun:
+  vod:
+    file:
+      keyId: LTAI5tECjrikxQfFD6ViPap3
+      keySecret: f4uoywXLco4KbDi262wBMU2ZnwBdeG
